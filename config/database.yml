@@ -20,6 +20,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: root
+  host: 127.0.0.1
 
 development:
   <<: *default
@@ -79,7 +82,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: wonderful_post_app_production
-  username: wonderful_post_app
-  password: <%= ENV['WONDERFUL_POST_APP_DATABASE_PASSWORD'] %>
+ <<: *default
+ database: wonderful_pots_app_production
+ password: <%= ENV['WONDERFUL_POST_APP_DATABASE_PASSWORD'] %>
